@@ -1,0 +1,25 @@
+body{
+    position: relative;
+    z-index: 1;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(121 128 138 / var(--tw-text-opacity));
+}
+
+.desktop-menu .sub-dropdown::before{
+    position: absolute;
+    top: -0.375rem;
+    left: 2.5rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    transform: translate(0, 0) rotate(45deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-color: rgb(216 225 237 );
+    content: '';
+    opacity: 1;
+    background-color: rgb(255 255 255);
+}

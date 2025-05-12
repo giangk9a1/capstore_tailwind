@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Base - Tailwind CSS Startup Template</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="">
+    <!-- Begin Header -->
+    <header class="fixed top-0 left-0 w-full py-7">
+        <div class="lg:container md:w-full px-8 mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="w-1/4">
+                <img src="./images/logo-light.svg" alt="Logo" class="h-10">
+            </a>
+            <div class="flex justify-between items-center w-3/4">
+                <!-- Desktop menu -->
+                <nav class="hidden md:flex space-x-10 desktop-menu">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Features</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none cursor-pointer">
+                            Pages
+                            <i class="fa-solid fa-angle-down ml-1"></i>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div class="sub-dropdown absolute -left-7 mt-5 w-70 bg-white border border-gray-200 rounded-md opacity-0 group-hover:opacity-100 shadow-lg transition transform z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog Grid</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog Single</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Sign In</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Sign Up</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">404</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Support</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block space-x-6">
+                    <a href="#" class="text-blue-600 transition">
+                        <i class="fa fa-sun"></i>
+                    </a>
+                    <a href="#" class="px-7 py-3 text-blue-600 transition">Sign In</a>
+                    <a href="#" class="px-7 py-3 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition">Sign Up</a>
+                </div>
+
+                <!-- Hamburger menu for mobile -->
+                <div class="lg:hidden flex items-center ml-auto space-x-6">
+                    <a href="#" class="text-blue-600 transition">
+                        <i class="fa fa-sun"></i>
+                    </a>
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:container md:w-full mx-auto mt-4 md:hidden hidden p-8">
+            <nav class="pl-8 max-h-96 overflow-y-auto space-y-5">
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Features</a>
+                <div class="relative w-full">
+                    <button id="mobile-pages-toggle"
+                        class="flex items-center w-full justify-between text-gray-600 hover:text-blue-600 focus:outline-none cursor-pointer">
+                        Pages
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="mobile-sub-dropdown" class="sub-dropdown mt-2 w-full bg-white border border-gray-200 rounded-md shadow-lg hidden">
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Blog Grid</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Blog Single</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Sign In</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Sign Up</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">404</a>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Support</a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
