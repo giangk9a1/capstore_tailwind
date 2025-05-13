@@ -24,58 +24,6 @@ body{
     background-color: rgb(255 255 255);
 }
 
-@keyframes fadeInLeft {
-    0% {
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    100% {
-      visibility: visible;
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
-@keyframes fadeInTop {
-    0% {
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-    100% {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
-
-@keyframes fadeInBottom {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    100% {
-      visibility: visible;
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
 @keyframes pulse-expand {
     0% {
       transform: scale(1);
@@ -113,17 +61,6 @@ body{
     font-size: 24px;
     border: none;
     cursor: pointer;
-}
-
-.animate-fadeInLeft {
-    animation: fadeInLeft 3s cubic-bezier(0.5, 0, 0, 1) forwards;
-}
-
-.animate-fadeInRight {
-    animation: fadeInRight 3s cubic-bezier(0.5, 0, 0, 1) forwards;
-}
-.animate-fadeInTop {
-    animation: fadeInTop 3s cubic-bezier(0.5, 0, 0, 1) forwards;
 }
 
 @keyframes ud-rotating{
@@ -167,4 +104,50 @@ body{
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+.project__tabs{
+  box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.05);
+}
+
+.project__tab.active{
+  background-color: rgb(78 107 255);
+}
+
+.project__item .project__item-overlay {
+  opacity: 0;
+  transition: all 0.3s;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition-duration: 0.7s;
+}
+
+.project__item:hover .project__item-overlay {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.swiper__item-content {
+  box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.05);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  content: '';
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: relative;
+  width:40px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-button-prev:hover i, .swiper-button-next:hover i{
+  color:white;
 }
