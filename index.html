@@ -11,13 +11,16 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <link rel="stylesheet" href="./index.css" />
 </head>
 
 <body class="">
     <!-- Begin Header -->
-    <header class="fixed top-0 left-0 w-full py-7">
-        <div class="lg:container md:w-full px-8 mx-auto flex justify-between items-center">
+    <header id="header" class="fixed top-0 left-0 w-full py-7 z-50 transition ease-in-out duration-100">
+        <div class="lg:container md:w-full mx-auto px-8 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="w-1/4">
                 <img src="./images/logo-light.svg" alt="Logo" class="h-10">
@@ -48,16 +51,16 @@
 
                 <!-- CTA Button -->
                 <div class="hidden lg:block space-x-6">
-                    <a href="#" class="text-blue-600 transition">
+                    <a href="#" class="transition text-white header-link">
                         <i class="fa fa-sun"></i>
                     </a>
-                    <a href="#" class="px-7 py-3 text-blue-600 transition">Sign In</a>
-                    <a href="#" class="px-7 py-3 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition">Sign Up</a>
+                    <a href="#" class="transition text-white header-link">Sign In</a>
+                    <a href="#" class="px-7 py-3 text-white bg-white/15 rounded-4xl transition header-button">Sign Up</a>
                 </div>
 
                 <!-- Hamburger menu for mobile -->
                 <div class="lg:hidden flex items-center ml-auto space-x-6">
-                    <a href="#" class="text-blue-600 transition">
+                    <a href="#" class="text-gray-800 transition">
                         <i class="fa fa-sun"></i>
                     </a>
                     <button id="menu-toggle" class="text-gray-800 focus:outline-none">
@@ -93,6 +96,391 @@
     </header>
     <!-- End Header -->
 
+    <main>
+        <!-- Begin Hero -->
+        <section id="hero" class="relative flex flex-col lg:flex-row items-center justify-between md:px-3 lg:px-8 py-48 md:py-40">
+            <div class="lg:container w-full mx-auto px-8">
+                <div class="w-full lg:w-1/2 lg:pr-0 flex flex-col items-center lg:items-start text-center lg:text-left mt-8 lg:mt-0 wow animate__animated animate__fadeInLeft" data-wow-duration="2s">
+                    <h1 class="text-4xl xl:text-5xl font-semibold leading-tight text-gray-800">
+                        We specialize in UI/UX, Web Development, Digital Marketing.
+                    </h1>
+                    <p class="mt-4 w-[80%]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus consequat varius nisi quis, posuere magna.
+                    </p>
+                    <div class="mt-10 flex flex-col lg:flex-row items-center gap-4">
+                        <a href="#" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-4xl hover:bg-blue-700">
+                            Get Started Now
+                        </a>
+                        <div class="flex flex-col">
+                            <a href="#" class="text-lg text-black">Call us (0123) 456 – 789</a>
+                            <span class="block lg:inline">For any question or concern</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-0 right-0 w-full md:w-1/2 lg:w-1/2 xl:w-[47rem] xl:h-[43rem] flex justify-center lg:justify-start">
+                <img src="images/shape-01.svg" alt="shape" class="absolute hidden xl:block top-[40%] left-[-10%] w-1/5 z-1"/>
+                <img src="images/shape-02.svg" alt="shape" class="absolute hidden xl:block bottom-0 right-[20%] z-2" />
+                <img src="images/shape-03.svg" alt="shape" class="absolute hidden xl:block bottom-1/8 left-[10%] z-12"/>
+                <img src="images/shape-04.svg" alt="shape" class="absolute w-full h-full top-0 right-0 object-cover" />
+                <img src="images/hero.png" alt="Woman" class="relative z-1 top-0 right-0 w-full" />
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <!-- Begin Features -->
+        <section id="features" class="mt-20 py-16">
+            <div class="container mx-auto px-12">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+                <div class="feature-item flex items-center gap-8 wow animate__animated animate__fadeInDown" data-wow-duration="2s">
+                    <div class="flex justify-center items-center flex-shrink-0 w-20 h-20 bg-pink-500 rounded-full">
+                        <img src="images/icon-01.svg" alt="Icon" />
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-3xl font-semibold text-gray-800 mb-2">24/7 Support</h4>
+                            <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-item flex items-center gap-8 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex justify-center items-center flex-shrink-0 w-20 h-20 bg-green-400 rounded-full">
+                        <img src="images/icon-02.svg" alt="Icon" />
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-3xl font-semibold text-gray-800 mb-2">Take Ownership</h4>
+                            <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-item flex items-center gap-8 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.4s">
+                    <div class="flex justify-center items-center flex-shrink-0 w-20 h-20 bg-orange-400 rounded-full">
+                        <img src="images/icon-03.svg" alt="Icon" />
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-3xl font-semibold text-gray-800 mb-2">24/7 Support</h4>
+                            <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- End Features -->
+
+        <!-- Start About -->
+        <section id="about" class="py-16 px-4 2xl:py-35">
+            <div class="container px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- About Images -->
+                <div class="about__images lg:flex gap-8 hidden wow animate__animated animate__fadeInLeft">
+                    <div class="about__images-left relative flex flex-col gap-8">
+                        <img src="images/shape-05.svg" alt="Shape" class="absolute -left-5 top-5" />
+                        <img src="images/about-01.png" alt="About" class="rounded-lg shadow-lg" />
+                        <img src="images/about-02.png" alt="About" class="rounded-lg shadow-lg" />
+                    </div>
+                    <div class="about__image-right relative flex flex-col items-center justify-center gap-8">
+                        <img src="images/shape-06.svg" alt="Shape" class="absolute left-0 top-0" />
+                        <img src="images/about-03.png" alt="About" class="w-full rounded-lg shadow-lg" />
+                        <img src="images/shape-07.svg" alt="Shape" class="absolute bottom-0 w-2/3" />
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="about__content flex flex-col gap-5 wow animate__animated animate__fadeInRight">
+                    <h4 class="text-xl font-semibold text-blue-500">Why Choose Us</h4>
+                    <h2 class="text-5xl leading-snug font-bold text-gray-800 mt-4">We Make Our customers happy by giving Best services.</h2>
+                    <p class="text-gray-600 mt-4 w-[95%]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                    <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" class="flex items-center mt-6 text-blue-600 hover:text-blue-800">
+                        <span class="pulse-button flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full mr-5">
+                            <img src="images/icon-play.svg" alt="Play" />
+                        </span>
+                        <span class="font-medium text-black">SEE HOW WE WORK</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Start Team -->
+        <section id="team" class="relative py-32">
+            <div class="absolute inset-0">
+                <span class="absolute top-0 left-0 w-full h-[60%] bg-gray-50"></span>
+                <img src="images/shape-08.svg" alt="Shape Bg" class="absolute top-0 right-0" />
+                <img src="images/shape-09.svg" alt="Shape" class="absolute top-1/2 left-[5%] w-12 animation-ud-rotating" />
+                <img src="images/shape-10.svg" alt="Shape" class="absolute top-[5%] left-1/5 w-14" />
+                <img src="images/shape-11.svg" alt="Shape" class="absolute top-[15%] right-[15%] w-20 animation-ud-rotating" />
+            </div>
+
+            <!-- Section Title -->
+            <div class="relative container mx-auto text-center mb-12 z-10">
+                <h2 class="text-5xl leading-tight font-bold text-center text-black w-1/2 mx-auto wow animate__animated animate__fadeInDown" data-wow-duration="2s">Meet With Our Creative Dedicated Team</h2>
+                <p class="mt-4 w-[46%] mx-auto wow animate__animated animate__fadeInDown" data-wow-duration="2s">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+                </p>
+            </div>
+
+            <!-- Team Members -->
+            <div class="container px-8 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Team Member -->
+                <div class="team__item relative overflow-hidden wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="relative team__item-bg overflow-hidden">
+                        <img class="w-full rounded-lg z-1" src="images/team-01.png" alt="Team Member" />
+                        <div class="team__item-social absolute bottom-0 left-0 w-full items-center justify-center z-10">
+                            <span class="absolute w-[120%] bg-pink-600 h-16 -right-5 bottom-0 z-0"></span>
+                            <span class="absolute w-[120%] bg-blue-600 rotate-[6deg] h-24 -left-5 -bottom-9 z-0"></span>
+                            <div class="relative mt-4 flex justify-center items-center space-x-8 z-10 pt-7 pb-5">
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center z-20">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-1">Olivia Andrium</h4>
+                        <p>Product Manager</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="team__item relative overflow-hidden wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="relative team__item-bg overflow-hidden">
+                        <img class="w-full rounded-lg z-1" src="images/team-02.png" alt="Team Member" />
+                        <div class="team__item-social absolute bottom-0 left-0 w-full items-center justify-center z-10">
+                            <span class="absolute w-[120%] bg-pink-600 h-16 -right-5 bottom-0 z-0"></span>
+                            <span class="absolute w-[120%] bg-blue-600 rotate-[6deg] h-24 -left-5 -bottom-9 z-0"></span>
+                            <div class="relative mt-4 flex justify-center items-center space-x-8 z-10 pt-7 pb-5">
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center z-20">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-1">Jemse Kemorun</h4>
+                        <p>Product Designer</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="team__item relative overflow-hidden wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="relative team__item-bg overflow-hidden">
+                        <img class="w-full rounded-lg z-1" src="images/team-03.png" alt="Team Member" />
+                        <div class="team__item-social absolute bottom-0 left-0 w-full items-center justify-center z-10">
+                            <span class="absolute w-[120%] bg-pink-600 h-16 -right-5 bottom-0 z-0"></span>
+                            <span class="absolute w-[120%] bg-blue-600 rotate-[6deg] h-24 -left-5 -bottom-9 z-0"></span>
+                            <div class="relative mt-4 flex justify-center items-center space-x-8 z-10 pt-7 pb-5">
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-pink-600">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center z-20">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-1">Avi Pestarica</h4>
+                        <p>Web Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Team -->
+
+        <!-- Start Serive -->
+        <section class="py-32">
+            <div class="container mx-auto px-8">
+                <!-- Start Service Title -->
+                <div class="animate-fadeInTop service__title text-center mb-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s">
+                    <h2 class="text-5xl leading-tight font-bold text-center text-black w-1/2 mx-auto mb-5">
+                        We Offer The Best Quality Service for You
+                    </h2>
+                    <p class="mt-4  w-[46%] mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+                    </p>
+                </div>
+                <!-- End Service Title -->
+
+                <!-- Service Items -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <img src="images/icon-04.svg" alt="Icon" class="mb-4 w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">Crafted for Startups</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <img src="images/icon-05.svg" alt="Icon" class="w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">High-quality Design</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <img src="images/icon-06.svg" alt="Icon" class="w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">All Essential Sections</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                        <img src="images/icon-07.svg" alt="Icon" class="w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">Speed Optimized</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                        <img src="images/icon-05.svg" alt="Icon" class="w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">Fully Customizable</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="service__item flex flex-col items-start hover:bg-white hover:rounded-lg hover:shadow-lg transition duration-200 p-12 wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                        <img src="images/icon-06.svg" alt="Icon" class="w-16 h-16" />
+                        <h4 class="text-2xl font-semibold text-gray-800 mt-11 mb-4">Regular Updates</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                </div>
+                <!-- End Service Items -->
+            </div>
+        </section>
+        <!-- Start Serive -->
+
+        <!-- Start Pricing Table -->
+        <section id="pricing" class="py-28 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-8 relative">
+                <!-- Bg Shapes -->
+                <img src="images/shape-06.svg" alt="Shape" class="absolute -top-[30%] left-0 w-16 h-16" />
+                <img src="images/shape-03.svg" alt="Shape" class="absolute top-[20%] right-[20%] w-16 h-16" />
+                <img src="images/shape-07.svg" alt="Shape" class="absolute -bottom-[5%] right-[-10%] w-24 h-24" />
+                <img src="images/shape-12.svg" alt="Shape" class="absolute -bottom-[20%] -left-[20%] w-3/4" />
+                <img src="images/shape-13.svg" alt="Shape" class="absolute -top-[14%] -right-[20%] w-full" />
+
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-gray-800 w-1/2 mx-auto mb-5 wow animate__animated animate__fadeInDown" data-wow-duration="2s">We Offer Great Affordable Premium Prices.</h2>
+                    <p class="mt-4 text-gray-600 w-[46%] mx-auto wow animate__animated animate__fadeInDown" data-wow-duration="2s">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
+                </div>
+
+                <!-- Pricing Switcher -->
+                <div class="flex items-center justify-center space-x-4 mb-12">
+                    <span class="text-lg font-medium text-black">Bill Monthly</span>
+                    <button class="relative w-12 h-6 bg-blue-600 rounded-full">
+                        <div class="absolute top-[2px] left-[2px] w-[20px] h-[20px] bg-white rounded-full transition-transform"></div>
+                    </button>
+                    <span class="text-lg font-medium text-black">Bill Annually</span>
+                </div>
+
+                <!-- Pricing Table -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Pricing Item -->
+                    <div class="pricing__item bg-white shadow-lg rounded-lg pt-11 pb-10 px-8 flex flex-col items-center wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <h4 class="text-2xl text-gray-800 mb-10">Starter</h4>
+                        <div class="mt-4 flex items-center gap-2">
+                          <h2 class="text-[40px] font-semibold text-gray-800">$29</h2>
+                          <span class="text-gray-600">/per month</span>
+                        </div>
+                        <p class="mt-4 mb-10">No credit card required</p>
+                        <!-- Button -->
+                        <a href="#" class="mt-6 inline-block px-12 py-3 bg-pink-500 text-white font-medium rounded-full hover:bg-blue-600">
+                            Try for free
+                        </a>
+
+                        <!-- Features -->
+                        <ul class="mt-6 space-y-3 text-center">
+                            <li>400 GB Storage</li>
+                            <li>Unlimited Photos &amp; Videos</li>
+                            <li>Exclusive Support</li>
+                        </ul>
+
+                        <p class="mt-4 text-gray-900">7-day free trial</p>
+                    </div>
+
+                    <!-- Pricing Item -->
+                    <div class="pricing__item bg-white shadow-lg rounded-lg pt-11 pb-10 px-8 flex flex-col items-center wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <h4 class="text-2xl text-gray-800 mb-10">Growth Plan</h4>
+                        <div class="mt-4 flex items-center gap-2">
+                          <h2 class="text-[40px] font-semibold text-gray-800">$59</h2>
+                          <span class="text-gray-600">/per month</span>
+                        </div>
+                        <p class="mt-4 mb-10">No credit card required</p>
+                        <!-- Button -->
+                        <a href="#" class="mt-6 inline-block px-12 py-3 bg-blue-500 text-white font-medium rounded-full hover:bg-pink-600">
+                            Try for free
+                        </a>
+
+                        <!-- Features -->
+                        <ul class="mt-6 space-y-3 text-center">
+                            <li>400 GB Storage</li>
+                            <li>Unlimited Photos &amp; Videos</li>
+                            <li>Exclusive Support</li>
+                        </ul>
+
+                        <p class="mt-4 text-gray-900">7-day free trial</p>
+                    </div>
+
+                    <!-- Pricing Item -->
+                    <div class="pricing__item bg-white shadow-lg rounded-lg pt-11 pb-10 px-8 flex flex-col items-center wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <h4 class="text-2xl text-gray-800 mb-10">Business</h4>
+                        <div class="mt-4 flex items-center gap-2">
+                          <h2 class="text-[40px] font-semibold text-gray-800">$29</h2>
+                          <span class="text-gray-600">/per month</span>
+                        </div>
+                        <p class="mt-4 mb-10">No credit card required</p>
+                        <!-- Button -->
+                        <a href="#" class="mt-6 inline-block px-12 py-3 bg-pink-500 text-white font-medium rounded-full hover:bg-blue-600">
+                            Try for free
+                        </a>
+
+                        <!-- Features -->
+                        <ul class="mt-6 space-y-3 text-center">
+                            <li>400 GB Storage</li>
+                            <li>Unlimited Photos &amp; Videos</li>
+                            <li>Exclusive Support</li>
+                        </ul>
+
+                        <p class="mt-4 text-gray-900">7-day free trial</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </section>
+        <!-- End Pricing Table -->
+    </main>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="./index.js"></script>
 </body>
 

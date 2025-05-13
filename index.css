@@ -23,3 +23,148 @@ body{
     opacity: 1;
     background-color: rgb(255 255 255);
 }
+
+@keyframes fadeInLeft {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes pulse-expand {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+}
+
+.pulse-button {
+    position: relative;
+}
+
+.pulse-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(243, 105, 141, 0.6);
+    background: var(--color-blue-500);
+    animation: pulse-expand 1.5s ease-out infinite;
+    z-index: 0;
+}
+
+.pulse-button span {
+    position: relative;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-blue-500);;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.animate-fadeInLeft {
+    animation: fadeInLeft 3s cubic-bezier(0.5, 0, 0, 1) forwards;
+}
+
+.animate-fadeInRight {
+    animation: fadeInRight 3s cubic-bezier(0.5, 0, 0, 1) forwards;
+}
+.animate-fadeInTop {
+    animation: fadeInTop 3s cubic-bezier(0.5, 0, 0, 1) forwards;
+}
+
+@keyframes ud-rotating{
+
+    0%, 100%{
+      transform: rotate(360deg);
+    }
+
+    50%{
+      transform: rotate(0deg);
+    }
+}
+.animation-ud-rotating{
+    animation: ud-rotating 30s linear infinite;
+}
+
+.team__item-bg:hover .team__item-social {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team__item-bg .team__item-social {
+    opacity: 0;
+    transition: all 0.3s;
+    visibility: hidden;
+    transform: translateY(100px);
+}
+.pricing__item.animate__fadeInDown,
+.service__item.animate__fadeInDown,
+.team__item.animate__fadeInDown {
+  animation-name: customFadeInDown;
+}
+
+@keyframes customFadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-60px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
