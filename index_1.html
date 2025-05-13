@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Base - Tailwind CSS Startup Template</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+
+<body class="">
+    <!-- Begin Header -->
+    <header class="fixed top-0 left-0 w-full py-7">
+        <div class="lg:container md:w-full px-8 mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="w-1/4">
+                <img src="./images/logo-light.svg" alt="Logo" class="h-10">
+            </a>
+            <div class="flex justify-between items-center w-3/4">
+                <!-- Desktop menu -->
+                <nav class="hidden md:flex space-x-10 desktop-menu">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Features</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none cursor-pointer">
+                            Pages
+                            <i class="fa-solid fa-angle-down ml-1"></i>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div
+                            class="sub-dropdown absolute -left-7 mt-5 w-70 bg-white border border-gray-200 rounded-md opacity-0 group-hover:opacity-100 shadow-lg transition transform z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog Grid</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog Single</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Sign In</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Sign Up</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">404</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Support</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block space-x-6">
+                    <a href="#" class="text-blue-600 transition">
+                        <i class="fa fa-sun"></i>
+                    </a>
+                    <a href="#" class="px-7 py-3 text-blue-600 transition">Sign In</a>
+                    <a href="#" class="px-7 py-3 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition">Sign
+                        Up</a>
+                </div>
+
+                <!-- Hamburger menu for mobile -->
+                <div class="lg:hidden flex items-center ml-auto space-x-6">
+                    <a href="#" class="text-blue-600 transition">
+                        <i class="fa fa-sun"></i>
+                    </a>
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:container md:w-full mx-auto mt-4 md:hidden hidden p-8">
+            <nav class="pl-8 max-h-96 overflow-y-auto space-y-5">
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Features</a>
+                <div class="relative w-full">
+                    <button id="mobile-pages-toggle"
+                        class="flex items-center w-full justify-between text-gray-600 hover:text-blue-600 focus:outline-none cursor-pointer">
+                        Pages
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="mobile-sub-dropdown"
+                        class="sub-dropdown mt-2 w-full bg-white border border-gray-200 rounded-md shadow-lg hidden">
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Blog Grid</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Blog Single</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Sign In</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">Sign Up</a>
+                        <a href="#" class="block w-full px-4 py-2 text-gray-700 hover:text-blue-600">404</a>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-2 text-gray-600 hover:text-blue-600">Support</a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <section class="pt-20 pb-20" data-aos="fade-up">
+        <div class="container px-8 mx-auto text-center">
+            <h1 class="text-4xl text-black md:text-5xl font-bold mb-4 ">We Offer Great Affordable<br>Premium Prices.
+            </h1>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout. The point of using.
+            </p>
+
+            <!-- Filter buttons -->
+            <div class="flex flex-wrap justify-center space-x-0 md:space-x-4 mb-10">
+                <button class="filter-btn px-6 py-2 bg-blue-600 text-white rounded-full m-2 md:m-0"
+                    data-filter="all">All</button>
+                <button class="filter-btn px-6 py-2 text-gray-600 hover:text-blue-600 rounded-full m-2 md:m-0"
+                    data-filter="branding">Branding Strategy</button>
+                <button class="filter-btn px-6 py-2 text-gray-600 hover:text-blue-600 rounded-full m-2 md:m-0"
+                    data-filter="digital">Digital Experiences</button>
+                <button class="filter-btn px-6 py-2 text-gray-600 hover:text-blue-600 rounded-full m-2 md:m-0"
+                    data-filter="ecommerce">Ecommerce</button>
+            </div>
+
+            <!-- Portfolio/Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 - Branding & Ecommerce -->
+                <div class="portfolio-item transition-all duration-500 ease-in-out transform overflow-hidden rounded-lg shadow-md relative group"
+                    data-category="branding ecommerce">
+                    <img src="https://base-tailwind.preview.uideck.com/images/project-01.png" alt="Plant in vase"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-70 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Photo Retouching</h3>
+                        <p class="text-gray-300">Branded Ecommerce</p>
+                        <div class="mt-4 bg-blue-500 hover:bg-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 - Digital -->
+                <div class="portfolio-item transition-all duration-500 ease-in-out transform overflow-hidden rounded-lg shadow-md relative group"
+                    data-category="digital">
+                    <img src="https://base-tailwind.preview.uideck.com/images/project-02.png" alt="Water bottle"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-70 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Photo Retouching</h3>
+                        <p class="text-gray-300">Digital Experience</p>
+                        <div class="mt-4 bg-blue-500 hover:bg-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 - Branding -->
+                <div class="portfolio-item transition-all duration-500 ease-in-out transform overflow-hidden rounded-lg shadow-md row-span-2 md:col-span-1 lg:col-span-1 relative group"
+                    data-category="ecommerce branding">
+                    <img src="https://base-tailwind.preview.uideck.com/images/project-04.png" alt="Phone display"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-70 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Photo Retouching</h3>
+                        <p class="text-gray-300">Branding Strategy</p>
+                        <div class="mt-4 bg-blue-500 hover:bg-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 - Ecommerce & Digital -->
+                <div class="portfolio-item transition-all duration-500 ease-in-out transform overflow-hidden rounded-lg shadow-md md:col-span-2 lg:col-span-2 relative group"
+                    data-category="ecommerce digital">
+                    <img src="https://base-tailwind.preview.uideck.com/images/project-03.png" alt="Laptop display"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-70 opacity-0 group-hover:opacity-50 transition-opacity duration-500 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Photo Retouching</h3>
+                        <p class="text-gray-300">Digital Ecommerce</p>
+                        <div class="mt-4 bg-blue-500 hover:bg-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+        <div class="lg:container md:w-full px-8 mx-auto text-center">
+            <h2 class="text-3xl text-black md:text-4xl font-bold mb-4 ">Client's Testimonials</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-16">
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout. The point of using.
+            </p>
+
+            <!-- Testimonial Slider -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Testimonial slides container -->
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-300 ease-in-out" id="slidesContainer">
+                        <!-- Slide 1 -->
+                        <div
+                            class="w-full flex-shrink-0 border-r-4 border-blue-600 p-6 bg-white shadow-lg rounded-lg flex">
+                            <div class="w-1/4 pr-6">
+                                <img src="https://base-tailwind.preview.uideck.com/images/testimonial.png"
+                                    alt="David Smith" class="rounded-lg">
+                            </div>
+                            <div class="w-3/4 text-left">
+                                <div class="text-4xl text-gray-300 mb-4">"</div>
+                                <p class="text-gray-700 mb-6 text-inherit italic">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis
+                                    enim sed,
+                                    ullamcorper semper ligula. Mauris consequat justo volutpat.
+                                </p>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="font-bold">David Smith</p>
+                                        <p class="text-gray-600 text-sm">Founder @demoCompany</p>
+                                    </div>
+                                    <img src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                                        alt="Dropcom" class="mt-4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div
+                            class="w-full flex-shrink-0 border-r-4 border-blue-600 p-6 bg-white shadow-lg rounded-lg flex">
+                            <div class="w-1/4 pr-6">
+                                <img src="https://base-tailwind.preview.uideck.com/images/testimonial.png"
+                                    alt="Sarah Johnson" class="rounded-lg">
+                            </div>
+                            <div class="w-3/4 text-left">
+                                <div class="text-4xl text-gray-300 mb-4">"</div>
+                                <p class="text-gray-700 mb-6 text-inherit italic">
+                                    Etiam consequat, neque sed tincidunt lacinia, est est congue dolor, eu placerat eros
+                                    dui eu
+                                    nisl. Aliquam pellentesque enim quis eros pellentesque sollicitudin.
+                                </p>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="font-bold">Sarah Johnson</p>
+                                        <p class="text-gray-600 text-sm">CEO @techSolutions</p>
+                                    </div>
+                                    <img src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                                        alt="TechSolutions" class="mt-4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div
+                            class="w-full flex-shrink-0 border-r-4 border-blue-600 p-6 bg-white shadow-lg rounded-lg flex">
+                            <div class="w-1/4 pr-6">
+                                <img src="https://base-tailwind.preview.uideck.com/images/testimonial.png"
+                                    alt="Michael Wong" class="rounded-lg">
+                            </div>
+                            <div class="w-3/4 text-left">
+                                <div class="text-4xl text-gray-300 mb-4">"</div>
+                                <p class="text-gray-700 mb-6 text-inherit italic">
+                                    Cras volutpat, metus nec sollicitudin consectetur, magna eros varius nisi, ut ornare
+                                    arcu lectus
+                                    vitae tortor. Sed eget metus arcu.
+                                </p>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="font-bold">Michael Wong</p>
+                                        <p class="text-gray-600 text-sm">CTO @innovateLabs</p>
+                                    </div>
+                                    <img src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                                        alt="InnovateLabs" class="mt-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="flex justify-center mt-10 space-x-4">
+                    <button id="prevBtn"
+                        class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="nextBtn"
+                        class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Indicator dots -->
+                <div class="flex justify-center mt-4 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-blue-600" data-slide="0"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-100" data-aos="zoom-in">
+        <div class="lg:container md:w-full px-8 mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Stat 1 -->
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">785</h3>
+                    <p class="text-gray-600">Global Brands</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">533</h3>
+                    <p class="text-gray-600">Happy Clients</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">865</h3>
+                    <p class="text-gray-600">Winning Award</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">346</h3>
+                    <p class="text-gray-600">Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trusted Brands Section -->
+    <section class="py-20 border-b border-gray-200">
+        <div class="lg:container md:w-full px-8 mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Trusted by Global Brands</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-16">
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout. The point of using.
+            </p>
+
+            <!-- Brands logo grid -->
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-01.svg" alt="Logitech"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg" alt="Dropcom"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-03.svg" alt="AMD"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-04.svg" alt="Nike"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-05.svg" alt="Mandiri"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://base-tailwind.preview.uideck.com/images/brand-light-06.svg" alt="Amazon"
+                    class="h-8 opacity-60 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+    <!-- Latest Blogs Section -->
+    <section class="py-20 border-b border-gray-200" data-aos="fade-up" data-aos-delay="100">
+        <div class="lg:container md:w-full px-8 mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Blogs & News</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-16">
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout. The point of using.
+            </p>
+
+            <!-- Blog cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md group relative">
+                    <div class="relative overflow-hidden">
+                        <img src="https://base-tailwind.preview.uideck.com/images/blog-01.png" alt="Blog image"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-gray bg-opacity-60 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                            <a href="#"
+                                class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="fa-solid fa-location-dot mr-1"></i>
+                                Musharaf City
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fa-solid fa-calendar mr-1"></i>
+                                25 Dec, 2025
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Free advertising for your online business</h3>
+
+                    </div>
+                </div>
+
+                <!-- Blog card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md group relative">
+                    <div class="relative overflow-hidden">
+                        <img src="https://base-tailwind.preview.uideck.com/images/blog-02.png" alt="Blog image"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-gray bg-opacity-60 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                            <a href="#"
+                                class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="fa-solid fa-location-dot mr-1"></i>
+                                Musharaf City
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fa-solid fa-calendar mr-1"></i>
+                                25 Dec, 2025
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">9 simple ways to improve your design skills</h3>
+
+                    </div>
+                </div>
+
+                <!-- Blog card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md group relative">
+                    <div class="relative overflow-hidden">
+                        <img src="https://base-tailwind.preview.uideck.com/images/blog-03.png" alt="Blog image"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-gray bg-opacity-60 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                            <a href="#"
+                                class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="fa-solid fa-location-dot mr-1"></i>
+                                Musharaf City
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fa-solid fa-calendar mr-1"></i>
+                                25 Dec, 2025
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Tips to quickly improve your coding speed</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="lg:container md:w-full px-8 mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">Let's Stay Connected</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    It is a long established fact that a reader will be distracted by the readable content
+                    of a page when looking at its layout. The point of using.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Contact information -->
+                <div class="bg-white p-8 rounded-lg col-span-1">
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2">Email Address</h4>
+                        <p class="text-gray-600">support@startup.com</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2">Office Location</h4>
+                        <p class="text-gray-600">76/A, Green valle, California USA.</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2">Phone Number</h4>
+                        <p class="text-gray-600">+008 8734 3433 233</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2">Skype Email</h4>
+                        <p class="text-gray-600">example@youremail.com</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Social Media</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Decorative element -->
+                    <div class="absolute bottom-0 right-0 w-20 h-20 bg-yellow-400 rounded-full opacity-50"></div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="bg-white p-8 rounded-lg col-span-2">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-2">Full name</label>
+                                <input type="text" placeholder="David Wonder"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-2">Email address</label>
+                                <input type="email" placeholder="example@email.com"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-2">Phone number</label>
+                                <input type="tel" placeholder="+000 2342 3432"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-2">Subject</label>
+                                <input type="text" placeholder="Type your subject"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm text-gray-600 mb-2">Message</label>
+                            <textarea rows="5" placeholder="Message"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="lg:container md:w-full px-8 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-2">Join with 5000+ Startups<br>Growing with Base.</h2>
+                    <p class="text-blue-100">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nibh lorem.
+                        Duis sed odio tortor in a efficitur eu. Ut venenatis rhoncus.
+                    </p>
+                </div>
+                <div>
+                    <a href="#" class="px-8 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 transition">Get
+                        Started Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16">
+        <div class="lg:container md:w-full px-8 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <img src="./images/logo-light.svg" alt="Logo" class="h-10 mb-6">
+                    <p class="text-gray-600 mb-6">
+                        Create, collaborate, and celebrate your digital presence with Base.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Services</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Resources</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Newsletter</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">FAQ</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Subscribe</h4>
+                    <p class="text-gray-600 mb-6">Subscribe to our newsletter for the latest updates</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Email address"
+                                class="px-4 py-3 border border-gray-300 rounded-l-full w-full focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <button type="submit"
+                                class="bg-blue-600 text-white px-6 rounded-r-full hover:bg-blue-700 transition">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600">© 2025 Base. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Terms of Service</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Toggle mobile pages dropdown
+        document.getElementById('mobile-pages-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-sub-dropdown').classList.toggle('hidden');
+        });
+
+        const slidesContainer = document.getElementById('slidesContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorDots = document.querySelectorAll('[data-slide]');
+        const slideCount = 3;
+        let currentIndex = 0;
+
+        // Update slider position
+        function updateSlider() {
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Update indicator dots
+            indicatorDots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-blue-600');
+                } else {
+                    dot.classList.remove('bg-blue-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        // Previous slide
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateSlider();
+        });
+
+        // Next slide
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateSlider();
+        });
+
+        // Click on indicator dots
+        indicatorDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            // Gán hiệu ứng ban đầu
+            portfolioItems.forEach(item => {
+                item.classList.add('transition-all', 'duration-500', 'ease-in-out', 'opacity-100', 'scale-100');
+                item.style.display = 'block';
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Update button styles
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('text-gray-600');
+                    });
+                    this.classList.add('bg-blue-600', 'text-white');
+                    this.classList.remove('text-gray-600');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        const categories = item.getAttribute('data-category').split(' ');
+                        const match = filterValue === 'all' || categories.includes(filterValue);
+
+                        if (!match) {
+                            // Ẩn trước
+                            item.classList.remove('opacity-100', 'scale-100');
+                            item.classList.add('opacity-0', 'scale-95');
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 450); // Delay hide
+                        }
+                    });
+
+                    // Sau khi item cũ ẩn xong, mới show item mới (delay 450ms)
+                    setTimeout(() => {
+                        portfolioItems.forEach(item => {
+                            const categories = item.getAttribute('data-category').split(' ');
+                            const match = filterValue === 'all' || categories.includes(filterValue);
+
+                            if (match) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.classList.remove('opacity-0', 'scale-95');
+                                    item.classList.add('opacity-100', 'scale-100');
+                                }, 10); // Cho reflow
+                            }
+                        });
+                    }, 450);
+                });
+            });
+
+        });
+
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true, // chỉ animate 1 lần
+        });
+
+
+
+    </script>
+</body>
+
+</html>
